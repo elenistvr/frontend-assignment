@@ -1,28 +1,28 @@
-import React from "react";
+import { FC } from "react";
 
 interface FormComponentProps {
   label: string;
   placeholder: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  id: string; 
+  id: string;
 }
 
-const FormComponent: React.FC<FormComponentProps> = ({
+const FormComponent: FC<FormComponentProps> = ({
   label,
   placeholder,
   value,
   onChange,
-  id, 
+  id,
 }) => {
   return (
     <div className="form-group">
-      <label htmlFor={id}>{label}</label> 
+      <label htmlFor={id}>{label}</label>
       <input
         type="text"
-        id={id} 
+        id={id}
         placeholder={placeholder}
-        value={value|| ''}
+        value={value || ""}
         onChange={onChange}
       />
     </div>
